@@ -58,7 +58,7 @@ std::vector<fileData> Reader(const std::string file)
 	//Something is really bad like the file was lost after opening (storage drive was removed during reading)
 	if (in.bad())
 	{
-		throw std::runtime_error("Soemthing Got FUCKED");
+		throw std::runtime_error("Something Got FUCKED");
 	}
 	//If the eof has been reached we can just return the data
 	else if (in.eof())
@@ -68,7 +68,7 @@ std::vector<fileData> Reader(const std::string file)
 	//If we stopped and none of bad() and eof() there was a fail()
 	else if (in.fail())
 	{
-		throw std::runtime_error("Some kind of fail?\nPossibly due to end of last line was end of stream.\n");
+		throw std::runtime_error("Some kind of fail?");
 	}
 }
 
