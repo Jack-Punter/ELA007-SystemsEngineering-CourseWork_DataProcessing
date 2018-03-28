@@ -42,8 +42,7 @@ std::vector<fileData> Reader(const std::string file)
 		{
 			data.push_back(
 				fileData{
-					stod(strLong),
-					stod(strLat),
+					{ stod(strLong), stod(strLat) },
 					stod(strBearing),
 					stoi(strTime)
 				});
@@ -75,5 +74,5 @@ std::vector<fileData> Reader(const std::string file)
 //Insertion operator to allow std::cout to accept fileData structs
 std::ostream& operator<< (std::ostream& cout, const fileData& data)
 {
-	return cout << "Longitude; " << data.longitude << "\nLatitude: " << data.latitude << "\nBearing: " << data.bearing << "\nTime: " << data.time << std::endl;
+	return cout << "Longitude; " << data.coordinate.GetX() << "\nLatitude: " << data.coordinate.GetY() << "\nBearing: " << data.bearing << "\nTime: " << data.time << std::endl;
 }

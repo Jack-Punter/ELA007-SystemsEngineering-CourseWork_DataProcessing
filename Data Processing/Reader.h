@@ -4,12 +4,12 @@
 #include <vector>
 #include <array>
 #include "helpers.h"
+#include "Vec2.h"
 
 //Struct to store a line of data from the CSV file
 struct fileData
 {
-	double longitude;
-	double latitude;
+	Vec2 coordinate;
 	double bearing;
 	int time;
 	//hhmmss -> 142427 = 14:24:27
