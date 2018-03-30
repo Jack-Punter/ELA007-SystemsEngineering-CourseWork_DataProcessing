@@ -4,6 +4,22 @@
 #include "Matrix2D.h"
 #include "Vec2.h"
 
+//Struct to store a line of data from the CSV file
+struct fileData
+{
+	Vec2 coordinate;
+	double bearing;
+	int time;
+	//hhmmss -> 142427 = 14:24:27
+};
+
+//Struct to store the output data
+struct outputData
+{
+	Vec2 loc;
+	int time;
+};
+
 //Wrapper for std::stod which takes a std::array of chars
 //Templated on a size_t so that any size of std::array can be passed
 template<size_t S>
@@ -29,3 +45,4 @@ void remove_erase_if(container& c, Pred f)
 
 std::ostream& operator<<(std::ostream& cout, const Matrix2D& rhs);
 std::ostream& operator<<(std::ostream& cout, const Vec2& rhs);
+std::ostream& operator<<(std::ostream& cout, const outputData& rhs);
