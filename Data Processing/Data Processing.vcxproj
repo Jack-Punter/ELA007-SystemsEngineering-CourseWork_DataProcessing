@@ -115,6 +115,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Helpers.cpp" />
+    <ClCompile Include="Matrix2D.cpp" />
     <ClCompile Include="Reader.cpp" />
     <ClCompile Include="Source.cpp" />
     <ClCompile Include="Vec2.cpp" />
@@ -129,6 +131,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Helpers.h" />
+    <ClInclude Include="Matrix2D.h" />
     <ClInclude Include="Reader.h" />
     <ClInclude Include="Vec2.h" />
   </ItemGroup>
