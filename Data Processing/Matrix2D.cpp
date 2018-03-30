@@ -1,6 +1,7 @@
 #include <math.h>
 #include "Matrix2D.h"
 #define PI 3.14159265358979323846
+
 Matrix2D::Matrix2D(double r0c0, double r0c1, double r1c0, double r1c1)
 	:
 	r0c0(r0c0),

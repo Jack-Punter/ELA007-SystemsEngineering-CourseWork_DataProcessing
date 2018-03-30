@@ -11,8 +11,7 @@ public:
 	Matrix2D Inverse() const;
 	static Matrix2D Rotation(double theta);
 
-	double r0c0, r0c1,
-		   r1c0, r1c1;
+	double r0c0, r0c1, r1c0, r1c1;
 };
 
 Matrix2D operator*(double lhs, const Matrix2D& rhs);

@@ -36,6 +36,8 @@ inline int stoi(std::array<char, S> arr)
 	return std::stoi(std::string(arr.data()));
 }
 
+//Function to quickly remove elements from a vector
+//Without having to copy all elements right of the removed object
 template<typename container, typename Pred>
 void remove_erase_if(container& c, Pred f)
 {
@@ -43,6 +45,8 @@ void remove_erase_if(container& c, Pred f)
 	c.erase(new_end, c.end());
 }
 
+//Insertion operators to output custom types
 std::ostream& operator<<(std::ostream& cout, const Matrix2D& rhs);
 std::ostream& operator<<(std::ostream& cout, const Vec2& rhs);
+std::ostream& operator<<(std::ostream& cout, const fileData& data);
 std::ostream& operator<<(std::ostream& cout, const outputData& rhs);
