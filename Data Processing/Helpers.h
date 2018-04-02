@@ -45,8 +45,12 @@ void remove_erase_if(container& c, Pred f)
 	c.erase(new_end, c.end());
 }
 
-//Insertion operators to output custom types
+
+//Allows insertions of matrices to output streams (e.g. std::cout)
 std::ostream& operator<<(std::ostream& cout, const Matrix2D& rhs);
+//Allows insertions of Vectors to output streams (e.g. std::cout)
 std::ostream& operator<<(std::ostream& cout, const Vec2& rhs);
+//Allows insertions of the input data to output streams (e.g. std::cout)
 std::ostream& operator<<(std::ostream& cout, const fileData& data);
+//Allows insertions of the output data to output streams (e.g. std::cout)
 std::ostream& operator<<(std::ostream& cout, const outputData& rhs);
