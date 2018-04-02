@@ -8,7 +8,7 @@ std::ostream& operator<<(std::ostream& cout, const Matrix2D& rhs)
 
 std::ostream& operator<<(std::ostream& cout, const Vec2& rhs)
 {
-	return cout << " {x: " << rhs.GetX() << " y: " << rhs.GetY() << " }";
+	return cout << rhs.GetX() << ',' << rhs.GetY();
 }
 
 std::ostream& operator<<(std::ostream& cout, const fileData& data)
@@ -18,5 +18,5 @@ std::ostream& operator<<(std::ostream& cout, const fileData& data)
 
 std::ostream& operator<<(std::ostream& cout, const outputData& rhs)
 {
-	return cout << " {Location: " << rhs.loc << " Time: " << rhs.time << " }";
+	return cout << rhs.loc << ',' << rhs.time;
 }
